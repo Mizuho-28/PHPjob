@@ -1,9 +1,10 @@
 <?php
 $text = $_POST['text'];
-$substr = substr($text,-mt_rand(1,10),1)
+$substr = substr($text,-mt_rand(1,strlen($text)),1);
 ?>
 <p><?php echo date("Y/m/d")?>の運勢は</p>
 <p>選ばれた数字は<?php echo $substr ?></p>
+
 
 <?php
   if($substr==0){
@@ -18,3 +19,4 @@ $substr = substr($text,-mt_rand(1,10),1)
   echo "大吉";
 }
 ?>
+
