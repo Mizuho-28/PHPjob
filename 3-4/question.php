@@ -14,7 +14,7 @@ $text = $_POST['text'];
 <?php
 $ports = [80,22,20,21];
 foreach($ports as $value){ ?>
-   <form action="answer.php" method="get">
+   <form action="answer.php" method="post">
       <input type="radio" name="ports">
         <?php echo $value;
       }?>
