@@ -4,7 +4,7 @@
 $text = $_POST['text'];
 //①画像を参考に問題文の選択肢の配列を作成してください。
 
-//★② ①で作成した、配列から正解の選択肢の変数を作成してください
+//② ①で作成した、配列から正解の選択肢の変数を作成してください
 $ports_correct = 80;
 $languages_correct = "HTML";
 $commands_correct = "select";
@@ -19,7 +19,7 @@ $commands_correct = "select";
 <?php
 $ports = [80,22,20,21];
 foreach($ports as $value){ ?>
-  <input type="radio" name="ports">
+  <input type="radio" name="ports" value="<?php echo $value; ?>">
        <?php echo $value;
       }?>     
 
@@ -29,7 +29,7 @@ foreach($ports as $value){ ?>
 <?php
 $languages = ["PHP","Python","JAVA","HTML"];
 foreach($languages as $value){ ?>
-  <input type="radio" name="languages">
+  <input type="radio" name="languages" value="<?php echo $value; ?>">
  <?php echo $value;
 }
 ?>
@@ -39,14 +39,17 @@ foreach($languages as $value){ ?>
 <?php
 $commands = ["join","select","insert","update"];
 foreach($commands as $value){ ?>
-  <input type="radio" name="commands">
+  <input type="radio" name="commands" value="<?php echo $value; ?>">
  <?php echo $value;
 }
 ?> 
 <!--問題の正解の変数と名前の変数を[answer.php]に送る-->
 <input type="hidden" name="ports_correct" value="<?php echo $ports_correct; ?>">
-<input type="hidden" name="ports_correct" value="<?php echo $languages_correct; ?>">
-<input type="hidden" name="ports_correct" value="<?php echo $commands_correct; ?>">
+<input type="hidden" name="languages_correct" value="<?php echo $languages_correct; ?>">
+<input type="hidden" name="commands_correct" value="<?php echo $commands_correct; ?>">
+
+
+
 <input type="hidden" name="text" value="<?php echo $text; ?>"><br>
 <input type="submit" value="回答する" />
 </form>
