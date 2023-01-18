@@ -44,12 +44,8 @@ function getName($list) {
     $i = 0;
     echo "【Aクラスの名簿】" . '<br>';
 //配列の中の名前を出す。 ★$key[0]の[0]を削除
-    foreach ($list as $key => $member) {
-        if ($i < count($list)) {
-            echo $key . '<br>'; 
-        }
-        $i++;
-    }
+    foreach(array_keys($list) as $key)
+    echo $key.'<br>';
 }
 // クラスの一覧を表示
 getName($list);
