@@ -64,13 +64,14 @@ if (isset($_POST['post'])) {
     <title>本 登録画面</title>
 </head>
 <body>
-    <h2>本  登録画面</h2>
+    <h2>本  登録画面</h2><br>
     <form action="" method="post">
         <input placeholder="タイトル" type="text" name="title" id="title" style="width: 250px; height: 30px;"><br>
         <input placeholder="発売日" type="date" name="date" id="date" style="width: 250px; height: 30px; margin-top: 15px;"><br>
-        <h4>在庫数</h4><br>
+        <h4>在庫数</h4>
         <input placeholder="選択してください" type="number" name="stock" min="0" max="100" style="width: 200px; height: 30px;">
-        
+        <br>
+        <br>
         <input class="button" type="submit" value="登録" name="post">
     </form>
 </body>
