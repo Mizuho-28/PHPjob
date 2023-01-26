@@ -32,17 +32,17 @@ try {
 </head>
 <body>
     <h2>在庫一覧画面</h2>
-    <div>
-        <button class="btn1" onclick="location.href='create_book.php'">新規登録</button>
-        <button class="btn2" onclick="location.href='logout.php'">ログアウト</button><br>
+    <div >
+        <button class="new" onclick="location.href='create_book.php'" style="background-color:rgba(7, 41, 235, 0.844); border-radius: 2px;border:none; color:white; font-size:12px;padding:5px;">新規登録</button>
+        <button class="btn2" onclick="location.href='logout.php'" style=" font-size:12px;padding:5px;border-radius: 2px;border:none; color:white;background-color:grey ">ログアウト</button><br>
     </div>
-        <table>
-            <tr>
+        <table class="table">
+            <tr class="list_title">
                 <th>タイトル</th>
                 <th>発売日</th>
                 <th>在庫数</th>
                 <th> </th>
-            </tr>
+            </tr><br>
 
             <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
                 <tr>
