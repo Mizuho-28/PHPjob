@@ -55,17 +55,18 @@ if (isset($_POST["register"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title></title>
 </head>
 <body>
     <font color="ACFF84"><?php echo htmlspecialchars($okMessage, ENT_QUOTES); ?></font><br>
-    <h1>ユーザー新規登録</h1>
-    <form action="register.php" method="post">
+    <h1>ユーザー登録画面</h1>
+    <form action="register.php" method="post" class="form_login">
        <font color="red"><?php echo htmlspecialchars($userError, ENT_QUOTES); ?></font><br>
         <input placeholder="ユーザー名" type="text" name="username" id="name" style="width: 250px; height: 30px">
         <br>
         <input placeholder="パスワード" type="password" name="password" id="password" style="width: 250px; height: 30px; margin-top: 15px;">
-        <br>
+        <br><br>
         <input class="button" type="submit" value="新規登録" name="register" id="register">
 
 
